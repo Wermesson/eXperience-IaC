@@ -1,3 +1,3 @@
 resource "aws_s3_bucket" "bucket" {
-  bucket = "experience-ec2"
+  bucket = var.s3_bucket
 }

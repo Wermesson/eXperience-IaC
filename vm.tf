@@ -4,6 +4,7 @@ resource "aws_instance" "vm" {
   associate_public_ip_address = true
   subnet_id                   = aws_subnet.subnet.id
   vpc_security_group_ids      = [aws_security_group.security_group.id]
+  user_data     = file("container-experience.sh")
 
   tags = local.common_tags
 

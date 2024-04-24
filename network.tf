@@ -39,7 +39,7 @@ resource "aws_security_group" "security_group" {
   tags = local.common_tags
 }
 
-resource "aws_vpc_security_group_ingress_rule" "allow_ssh" {
+resource "aws_vpc_security_group_ingress_rule" "experience_port" {
   security_group_id = aws_security_group.security_group.id
   cidr_ipv4         = "0.0.0.0/0"
   from_port         = 9090

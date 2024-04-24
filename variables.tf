@@ -5,3 +5,12 @@ variable "ami" {
 variable "instance_type" {
   default = "t3.micro"
 }
+
+variable "s3_bucket" {
+  type = string
+  default = "experience-ec2"
+}
+
+variable "aws_key" {
+  type = string
+}
