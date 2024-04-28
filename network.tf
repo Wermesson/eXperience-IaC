@@ -47,6 +47,14 @@ resource "aws_vpc_security_group_ingress_rule" "experience_port" {
   to_port           = 9090
 }
 
+resource "aws_vpc_security_group_ingress_rule" "ssh_port_22" {
+  security_group_id = aws_security_group.security_group.id
+  cidr_ipv4         = "0.0.0.0/0"
+  from_port         = 22
+  ip_protocol       = "tcp"
+  to_port           = 22
+}
+
 resource "aws_vpc_security_group_egress_rule" "allow_all_traffic_ipv4" {
   security_group_id = aws_security_group.security_group.id
   cidr_ipv4         = "0.0.0.0/0"

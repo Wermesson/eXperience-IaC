@@ -1,3 +1,4 @@
-/experience*
+experience.zip
 aws-key*
-dockerfile
+.terraform*
+plan.out

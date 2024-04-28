@@ -1,16 +1,16 @@
 variable "ami" {
-  default = "ami-04e5276ebb8451442"
+  default = "ami-080e1f13689e07408"
 }
 
 variable "instance_type" {
-  default = "t3.micro"
+  default = "t2.micro"
 }
 
 variable "s3_bucket" {
-  type = string
+  type    = string
   default = "experience-ec2"
 }
 
-variable "aws_key" {
+variable "aws_key_pub" {
   type = string
 }
